@@ -1,0 +1,38 @@
+请随意翻看以下选项，并作出选择
+7
+电脑A
+6
+colorA black
+priceA 4999RMB
+cpuA Intel
+RAMA 8GB
+硬盘A 1TB
+显卡A 独立显卡
+电脑B
+2
+colorB pink
+priceB 7999RMB
+电脑C
+2
+colorC red
+priceC 6999RMB
+电脑D
+2
+colorD black
+priceD 4999RMB
+电脑E
+2
+colorE pink
+priceE 7999RMB
+电脑F
+2
+colorF red
+priceF 6999RMB
+电脑G
+6
+colorG red
+priceG 6999RMB
+cpuG AMD
+RAMG 16GB
+硬盘G 2TB
+显卡G 独立显卡

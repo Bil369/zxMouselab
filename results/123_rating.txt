@@ -1,0 +1,7 @@
+Rating: 6
+Decision Time: 17.124
+Choice History:
+(choice	time)
+None	0.0
+6	6.603
+6	17.124
