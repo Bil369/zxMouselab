@@ -1,0 +1,49 @@
+Rating: 4
+Decision Time: 1.623
+Choice History:
+(choice	time)
+None	0.0
+4	1.025
+
+Rating: 4
+Decision Time: 1.003
+Choice History:
+(choice	time)
+None	0.0
+4	0.444
+
+Rating: 4
+Decision Time: 1.067
+Choice History:
+(choice	time)
+None	0.0
+4	0.489
+
+Rating: 4
+Decision Time: 1.267
+Choice History:
+(choice	time)
+None	0.0
+4	0.492
+
+Rating: 4
+Decision Time: 1.122
+Choice History:
+(choice	time)
+None	0.0
+4	0.496
+
+Rating: 4
+Decision Time: 1.361
+Choice History:
+(choice	time)
+None	0.0
+4	0.432
+
+Rating: 4
+Decision Time: 1.196
+Choice History:
+(choice	time)
+None	0.0
+4	0.603
+
