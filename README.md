@@ -9,8 +9,8 @@
 
 ![示例](example1.png)
 
-支持决策自信度评价量表：
-![自信度评价](example2.png)
+支持评价量表：
+![评价量表](example2.png)
 
 由于本人水平有限，该工具的实现还有诸多不够完善的地方，可以在Issues中提出，我也会继续改进。 
 
@@ -20,11 +20,12 @@
 
 - [zxMouselab](#zxMouselab)
   - [目录](#%e7%9b%ae%e5%bd%95)
+  - [特性](#特性)
   - [安装](#%e5%ae%89%e8%a3%85)
   - [使用](#%e4%bd%bf%e7%94%a8)
     - [设置信息板](#设置信息板)
     - [运行](#运行)
-    - [数据](#数据)
+    - [结果](#结果)
   - [License](#license)
 
 ## 安装
@@ -38,35 +39,32 @@
 ### 设置信息板
 tests目录下存放不同的信息板，一个信息板一个文件。注意所有存放在tests目录下的文件都会被受试者使用。
 
-每个文件的格式为（请勿在文件中输入#及之后的内容）：
-```plain
-请随意翻看以下选项，并作出选择
-7 # the number of options
-电脑A # option name
-6 # the number of choices in an option
-colorA black # each option: option_name option_value
-priceA 4999RMB #...
-cpuA Intel
-RAMA 8GB
-硬盘A 1TB
-显卡A 独立显卡
-电脑B # the next option
-2 #...
-colorB pink #...
-priceB 7999RMB #...
+每个文件的格式为：
+![test_example](test_example.png)
+
+信息板支持最多6个属性，24个选项，如果选项数多余6个，请开启大选择集支持：
+
+编辑Mouselab.py文件开始处：
+```python
+####################################################
+big_support = True  # 大选择集：True 小选择集：False
+####################################################
 ```
 
 ### 运行
+
 在PsychoPy中或在Python环境中（确保安装了PsychoPy依赖）运行zxMouselab.py即可。
 
-### 数据
-在results目录下有三个数据文件：
+### 结果
 
-xxx_detail.csv记录了完整的受试者操作序列，包括受试者ID、测试ID、action和持续时间(s)
+输出结果位于results文件夹下：
+- sub_id_detail.csv记录了被试者所有查看记录和对应时间(s)
+- sub_id_sum.csv记录了被试者的最终选择结果、决策时间(s)以及查看每个格子的总时间(s)
+- sub_id_rating.txt记录了被试者的所有评分记录、决策时间(s)、选择评分对应的时间点
 
-xxx_sum.csv记录了受试者ID、测试ID、最终选择以及在每个属性上停留的总时间(s)
+支持计算搜索深度(DS)与搜索模式(PS)：   
 
-xxx_rating.txt记录了最后的自信度评价量表结果，包括rating、desicion time以及choice history，choice history是选择的自信度和选择时间(click time)，最后一行代表的是确认时间。
+运行ds_ps_calculation.py，会对results下的所有被试者记录进行计算，搜索深度保存为ds_results.csv，搜索模式保存为ps_results.csv
 
 ## License
 [GPL](https://github.com/Bil369/zxMouselab/blob/master/LICENSE) &copy; [Bil369](https://github.com/Bil369)
