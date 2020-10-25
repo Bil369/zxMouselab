@@ -329,7 +329,7 @@ scr_height = 1080
 sum_file = open(os.path.join('results', str(sub_id) + '_sum' + '.csv'), 'w')
 detail_file = open(os.path.join('results', str(sub_id) + '_detail' + '.csv'), 'w')
 rating_file = open(os.path.join('results', str(sub_id) + '_rating' + '.txt'), 'w')
-win = Window(size=(scr_width, scr_height), units='norm', fullscr=False, color=(255, 255, 255), colorSpace='rgb255')
+win = Window(size=(scr_width, scr_height), units='norm', fullscr=True, color=(255, 255, 255), colorSpace='rgb255')
 
 # introduction 1
 intro1 = ShowAndConfirm(win, 'imgs/intro1.png', '确认')
